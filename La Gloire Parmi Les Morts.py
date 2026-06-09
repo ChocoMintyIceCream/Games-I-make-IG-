@@ -32,7 +32,7 @@ def firpoint(canend):
         print('')
         print("Achievement Unlocked:")
         print("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m")
-        achieve.append("One Step Closer To The Truth(Earn Your First Canon Ending point)")
+        achieve.append("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m(Earn Your First Canon Ending point)")
     else:
         print("you've aquired another canon ending point.")
     return canend
@@ -100,19 +100,19 @@ while act == 1:
                 break
             else:
                 print("A: Kill the guards (requires a weapon)")
-                print("B: sneek past (requires: \033[38;2;130;0;250mGrappling Hook\033[0m)")
+                print("B: sneek past (requires:",invent[0],")")
                 print("To check inventory, type 'C'")
                 Q0 = input(":",).upper()
         elif Q0 == "B":
             print(space.center(100))
             print(space.center(100))
             print(space.center(100))
-            write("You silently retrieve, and while you are out of the guard's vision, you run to the nearest wall of the border. You throw the hook, and it grips the edge of the border. You begin to climb slowly, making sure to check your surroundings with every step you take. You hear and see two guards approaching just as you are about to reach the ledge.")
+            write("You silently retrieve, and while you are out of the guard's vision, you run to the nearest wall of the border. You throw the hook, and it grips the edge of the border. You begin to climb slowly, making sure to check your surroundings with every step. You hear and see two guards approaching just as you are about to reach the ledge.")
             write("What should you do?")
             print("")
-            write("A: Ledge Kill(requires a weapon)")
-            write("B: Call horse (requires: \033[38;2;100;100;100mHorse\033[0m ally)")
-            write("C: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
+            print("A: Ledge Kill(requires a weapon)")
+            print("B: Call horse (requires: \033[38;2;100;100;100mHorse\033[0m ally)")
+            print("C: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
             Q1 = input(":",).upper()
             if Q1 == "A":
                 print(space.center(100))
@@ -121,9 +121,9 @@ while act == 1:
                 write("You successfully take out one of the guards by pulling him off the ledge and letting him fall to his death. You finish climbing but are surprised to see that there were more guards than you expected.")
                 print("")
                 write("What should you do?")
-                write("A: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
-                write("B: Make a run for it")
-                write("C: Fight back (requires a weapon)")
+                print("A: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
+                print("B: Make a run for it")
+                ptinr("C: Fight back (requires a weapon)")
                 btwo = input(":",).upper()
                 if btwo == "A":
                     print(space.center(100))
@@ -163,10 +163,10 @@ while act == 1:
                     print('')
                     print("Your current health is:",hp)
                     print("")
-                    print('After taking a small break, you resume your descend and successfully make it over the border.')
+                    write('After taking a small break, you resume your descend and successfully make it over the border.')
                     break
             elif Q1 =="B" and "Horse" in allies:
-                write("Are you sure?")
+                print("Are you sure?")
                 horsedeath = input(":",).upper()
                 if horsedeath =="YES":
                     print(space.center(100))
@@ -185,12 +185,11 @@ while act == 1:
                 elif horsedeath == "NO":
                     print("action canceled")
             elif Q1 == "C":
-                write("You reach for your satchel while keeping yourself steady with one hand. Quickly you pull out a smoke bomb and throw it over the ledge. You hear commotion coming from above followed by coughs once the bomb goes off.")
+                write("You reach for your satchel while keeping yourself steady with one hand. Quickly, you pull out a smoke bomb and throw it over the ledge. You hear commotion coming from above, followed by coughs once the bomb goes off.")
                 write("You finish climbing the ledge and quickly begin to descend on the country. You make it there once the smoke has disappeared.")
                 smkbmb-=1
-                print("")
                 print('')
-                write("You now have:",smkbmb,"smoke bomb(s) left.")
+                print("You now have:",smkbmb,"smoke bomb(s) left.")
                 break
         elif Q0 == "C":
             for wep in weap:
@@ -221,26 +220,21 @@ while act == 1:
         print('')
         allies.remove("Horse")
         allies.append("None")
-        print("Your current ally list is:")
+        write("Your current ally list:")
         print(allies)
         print('')
-        print("Achievement Unlocked:")
+        write("Achievement Unlocked:")
         print("\033[38;2;230;190;0mThe Journey Begins(Again)\033[0m")
         print('')
         achieve.append("\033[38;2;230;190;0mThe Journey Begins(Again)\033[0m(Make it over the border in Act 1)")
     elif Q1 == "B" and "Horse" != allies:
-        print("You run without looking back and only stop once you are out of breath. You collapse infront of a tree and rest against it. You run your hands through the bark wishing it was the pelt of your horse.")
-        print("You sigh and extract the map with your free hand.")
+        write("You run without looking back and only stop once you are out of breath. You collapse infront of a tree and rest against it. You run your hands through the bark wishing it was the pelt of your horse.")
+        write("You sigh and extract the map with your free hand.")
         print('')
-        print("Achievement Unlocked:")
+        write("Achievement Unlocked:")
         print("\033[38;2;230;190;0mAin't That a Warm Welcome?\033[0m")
         print('')
         achieve.append("\033[38;2;230;190;0mAin't That a Warm Welcome?\033[0m(Sacrifice your horse in Act 1)")
-    print('')
-    print('')
-    print("Now that you've made it into Switzerland, you must find the Kingdom ruled by \033[0;31mAldéric Tremblay\033[0m.")
-    
-    
 
 # ending yay and achievements lol!!:
 print("")
