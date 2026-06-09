@@ -64,23 +64,23 @@ while act == 1:
     print(space.center(100))
     print(space.center(100))
     print(space.center(100))
-    auto("       Act 1 - Et Quand On A Les Bras Ballants, La Maison Finit Par Avoir Des Gouttières")
+    write("       Act 1 - Et Quand On A Les Bras Ballants, La Maison Finit Par Avoir Des Gouttières")
     print("")
     print(space.center(100))
     print(space.center(100))
     print(space.center(100))
-    auto("                                         \033[1mDecember 15, 1793\033[0m")
+    write("                                         \033[1mDecember 15, 1793\033[0m")
     print("")
     write("The storm is not dying down; it continues to intensify with every gallop of the horse below. The winds, wild and vile, shake the surrounding trees. The snow descending from the sky feels like small daggers piercing through the skin. Yet, none of it will quench the fire of your determination.")
-    auto("It’s been months since you left France for this strange country. All of your journey has led you here: a foreign country far away from home, a place where the sun doesn't rise, the land of thieves and mercenaries, the land where those \033[3mcowards\033[0m ran away to.")
-    auto("The loud galloping of the horse below stops as soon as you pull on the reins. It neighs and steps on its hind legs. The gates of the kingdom welcome your view, standing tall like an obelisk.")
-    auto("You dismount the horse and slowly make your way towards the gates. Two guards standing side by side, both of them equipped with sabres.")
+    write("It’s been months since you left France for this strange country. All of your journey has led you here: a foreign country far away from home, a place where the sun doesn't rise, the land of thieves and mercenaries, the land where those \033[3mcowards\033[0m ran away to.")
+    write("The loud galloping of the horse below stops as soon as you pull on the reins. It neighs and steps on its hind legs. The gates of the kingdom welcome your view, standing tall like an obelisk.")
+    write("You dismount the horse and slowly make your way towards the gates. Two guards standing side by side, both of them equipped with sabres.")
     print('')
-    auto("")
-    auto("What will you do?")
-    auto("A: Kill the guards (requires a weapon)")
-    auto("B: sneak past (requires:\033[38;2;130;0;250mGrappling Hook\033[0m)")
-    auto("To check your stats, type 'C'")
+    write("")
+    write("What will you do?")
+    write("A: Kill the guards (requires a weapon)")
+    write("B: sneak past (requires:\033[38;2;130;0;250mGrappling Hook\033[0m)")
+    write("To check your stats, type 'C'")
     Q0 = input(":",).upper()
     while Q0 != "A" or Q0 !="B":
         dd(hp,act,death)
@@ -94,7 +94,7 @@ while act == 1:
                 write("You manage to kill both guards but were wounded in the process")
                 hp-=25
                 notoriety+=20
-                auto("Your current health is:",hp)
+                write("Your current health is:",hp)
                 print("")
                 canend += 1
                 break
@@ -107,12 +107,12 @@ while act == 1:
             print(space.center(100))
             print(space.center(100))
             print(space.center(100))
-            auto("You silently retrieve, and while you are out of the guard's vision, you run to the nearest wall of the border. You throw the hook, and it grips the edge of the border. You begin to climb slowly, making sure to check your surroundings with every step you take. You hear and see two guards approaching just as you are about to reach the ledge.")
+            write("You silently retrieve, and while you are out of the guard's vision, you run to the nearest wall of the border. You throw the hook, and it grips the edge of the border. You begin to climb slowly, making sure to check your surroundings with every step you take. You hear and see two guards approaching just as you are about to reach the ledge.")
             write("What should you do?")
             print("")
-            auto("A: Ledge Kill(requires a weapon)")
-            auto("B: Call horse (requires: \033[38;2;100;100;100mHorse\033[0m ally)")
-            auto("C: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
+            write("A: Ledge Kill(requires a weapon)")
+            write("B: Call horse (requires: \033[38;2;100;100;100mHorse\033[0m ally)")
+            write("C: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
             Q1 = input(":",).upper()
             if Q1 == "A":
                 print(space.center(100))
@@ -120,10 +120,10 @@ while act == 1:
                 print(space.center(100))
                 write("You successfully take out one of the guards by pulling him off the ledge and letting him fall to his death. You finish climbing but are surprised to see that there were more guards than you expected.")
                 print("")
-                auto("What should you do?")
-                auto("A: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
-                auto("B: Make a run for it")
-                auto("C: Fight back (requires a weapon)")
+                write("What should you do?")
+                write("A: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
+                write("B: Make a run for it")
+                write("C: Fight back (requires a weapon)")
                 btwo = input(":",).upper()
                 if btwo == "A":
                     print(space.center(100))
@@ -166,16 +166,16 @@ while act == 1:
                     print('After taking a small break, you resume your descend and successfully make it over the border.')
                     break
             elif Q1 =="B" and "Horse" in allies:
-                auto("Are you sure?")
+                write("Are you sure?")
                 horsedeath = input(":",).upper()
                 if horsedeath =="YES":
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
-                    auto('You whistle for your horse, startling the guards above. You see them running past you, and they begin shouting at the animal. While they are distracted, you finally finish climbing up the border and, without a second thought, begin descending into the country. As you finally make it down, you hear multiple muskets going off, followed by a loud neigh.')
+                    write('You whistle for your horse, startling the guards above. You see them running past you, and they begin shouting at the animal. While they are distracted, you finally finish climbing up the border and, without a second thought, begin descending into the country. As you finally make it down, you hear multiple muskets going off, followed by a loud neigh.')
                     print('')
-                    auto("You have lost an ally:")
-                    auto("\033[38;2;100;100;100mHorse\033[0m has been removed")
+                    write("You have lost an ally:")
+                    write("\033[38;2;100;100;100mHorse\033[0m has been removed")
                     print('')
                     allies.remove("Horse")
                     allies.append("None")
@@ -185,12 +185,12 @@ while act == 1:
                 elif horsedeath == "NO":
                     print("action canceled")
             elif Q1 == "C":
-                auto("You reach for your satchel while keeping yourself steady with one hand. Quickly you pull out a smoke bomb and throw it over the ledge. You hear commotion coming from above followed by coughs once the bomb goes off.")
-                auto("You finish climbing the ledge and quickly begin to descend on the country. You make it there once the smoke has disappeared.")
+                write("You reach for your satchel while keeping yourself steady with one hand. Quickly you pull out a smoke bomb and throw it over the ledge. You hear commotion coming from above followed by coughs once the bomb goes off.")
+                write("You finish climbing the ledge and quickly begin to descend on the country. You make it there once the smoke has disappeared.")
                 smkbmb-=1
                 print("")
                 print('')
-                auto("You now have:",smkbmb,"smoke bomb(s) left.")
+                write("You now have:",smkbmb,"smoke bomb(s) left.")
                 break
         elif Q0 == "C":
             for wep in weap:
