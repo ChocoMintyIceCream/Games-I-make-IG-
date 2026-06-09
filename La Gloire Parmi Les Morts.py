@@ -213,6 +213,39 @@ while act == 1:
             print("To check your stats, type 'C'")
             Q0 = input(":",).upper()
     print("")
+    if Q0 == "A":
+        write("As you mount your horse and make it through the gates, you hear shouts coming from up the border. You turn to look back and see five guards shouting at you, the muskets pointing at you and the horse. You tell your horse 'allez!' and it speeds off.")
+        write("Your notoriety has gone up:")
+        print("Your current notoriety is:",notoriety)
+        firpoint(canend)
+    elif Q0 == "B" and "Horse" in allies:
+        write("As you begin walking, you see that the guards at the entrance are closely observing your horse. Whistling for it is not an option. Hence, you walk away, hoping for the horse's well being...")
+        print('')
+        write("You have lost an ally:")
+        write("\033[38;2;100;100;100mHorse\033[0m has been removed")
+        print('')
+        allies.remove("Horse")
+        allies.append("None")
+        print("Your current ally list is:")
+        print(allies)
+        print('')
+        print("Achievement Unlocked:")
+        print("\033[38;2;230;190;0mThe Journey Begins(Again)\033[0m")
+        print('')
+        achieve.append("The Journey Begins(Again)(Make it over the border in Act 1)")
+    elif Q1 == "B" and "Horse" != allies:
+        print("You run without looking back and only stop once you are out of breath. You collapse infront of a tree and rest against it. You run your hands through the bark wishing it was the pelt of your horse.")
+        print("You sigh and extract the map with your free hand.")
+        print('')
+        print("Achievement Unlocked:")
+        print("\033[38;2;230;190;0mAin't That a Warm Welcome?\033[0m")
+        print('')
+        achieve.append("Ain't That a Warm Welcome?(Sacrifice your horse in Act 1)")
+    print('')
+    print('')
+    print("Now that you've made it into Switzerland, you must find the Kingdom ruled by \033[0;31mAldéric Tremblay\033[0m.")
+    
+    
 
 # ending yay and achievements lol!!:
 print("")
