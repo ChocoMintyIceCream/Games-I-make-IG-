@@ -36,7 +36,6 @@ def firpoint(canend):
     else:
         print("you've aquired another canon ending point.")
     return canend
-#AHHHHHHHHH I must finish this stupid ass game cuz I...Just want to lowkey
 notoriety = 0
 hp = 1000
 weap = ["Golden Dagger","Rapier",]
@@ -54,7 +53,7 @@ death = 0
 checkpoint = 0
 deadach = "off"
 
-#I really hope nobody reads these notes... They're just me lowkey rambling about my OC(cuz he's cool and my son and I just love this universe xp) and randomly droping lore...
+#I really hope nobody reads these notes... They're just me lowkey rambling about my OC(cuz he's cool and my son and I just love this universe xp) and randomly dropping lore...
 
 txt = "La Gloire Parmi Les Morts"
 space = "."
