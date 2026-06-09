@@ -7,11 +7,6 @@ def write(print):
         stdout.flush()
         time.sleep(.086)
     next = input()
-def auto(print):
-    for i in print:
-        stdout.write(i)
-        stdout.flush()
-        time.sleep(.086)
 def dd(hp,act,death):
     if hp == 0 and act == 0:
         global deadach
@@ -112,7 +107,7 @@ while act == 1:
             print(space.center(100))
             print(space.center(100))
             print(space.center(100))
-            auto("You silently retrieve, and while you are out of the guards vision, you run to the nearest wall of the border. You throw the hook, and it grips the edge of the border. You begin to climb slowly, making sure to check your surroundings with every step you take. You hear and see two guards approaching just as you are about to reach the ledge.")
+            auto("You silently retrieve, and while you are out of the guard's vision, you run to the nearest wall of the border. You throw the hook, and it grips the edge of the border. You begin to climb slowly, making sure to check your surroundings with every step you take. You hear and see two guards approaching just as you are about to reach the ledge.")
             write("What should you do?")
             print("")
             auto("A: Ledge Kill(requires a weapon)")
@@ -135,23 +130,23 @@ while act == 1:
                     print(space.center(100))
                     print(space.center(100))
                     write("You reach into your satchel and throw the smoke bomb at the guards. The bomb doesn't go off and they begin to approach you.")
-                    auto('You slowly back away, raising your hands in surrender. Just as the guards are only a few inches away from you the smoke bomb goes off.')
-                    auto("You quickly begin to descend into the country while the guards start coughing.")
+                    write('You slowly back away, raising your hands in surrender. Just as the guards are only a few inches away from you the smoke bomb goes off.')
+                    write("You quickly begin to descend into the country while the guards start coughing.")
                     print('')
-                    auto('Your notoriety has increased')
+                    write('Your notoriety has increased')
                     notoriety+=35
-                    auto("Your current notoriety is:",notoriety)
+                    print("Your current notoriety is:",notoriety)
                     smkbmb-=1
                     print('')
-                    auto("You now have:",smkbmb,"smoke bombs left")
+                    print("You now have:",smkbmb,"smoke bombs left")
                     break
                 elif btwo == "B":
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
-                    auto('You decide to make a run for it...')
-                    auto("It does not end in your favor")
-                    auto('You hear the sound of muskets going off followed by multiple sharp pains through your body. You fall to the ground and the world starts to go dark')
+                    write('You decide to make a run for it...')
+                    write("It does not end in your favor")
+                    write('You hear the sound of muskets going off followed by multiple sharp pains through your body. You fall to the ground and the world starts to go dark')
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
@@ -162,13 +157,13 @@ while act == 1:
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
-                    auto("You decide to stab your way out of confrontation.")
-                    auto("You successfully end kill all five guards but are wounded in the process")
-                    hp -=55
+                    write("You decide to stab your way out of confrontation.")
+                    write("You successfully end kill all five guards but are wounded in the process")
+                    hp-=55
                     print('')
-                    auto("Your current health is:",hp)
+                    print("Your current health is:",hp)
                     print("")
-                    auto('After taking a small break, you resume your descend and successfully make it over the border.')
+                    print('After taking a small break, you resume your descend and successfully make it over the border.')
                     break
             elif Q1 =="B" and "Horse" in allies:
                 auto("Are you sure?")
@@ -232,7 +227,7 @@ while act == 1:
         print("Achievement Unlocked:")
         print("\033[38;2;230;190;0mThe Journey Begins(Again)\033[0m")
         print('')
-        achieve.append("The Journey Begins(Again)(Make it over the border in Act 1)")
+        achieve.append("\033[38;2;230;190;0mThe Journey Begins(Again)\033[0m(Make it over the border in Act 1)")
     elif Q1 == "B" and "Horse" != allies:
         print("You run without looking back and only stop once you are out of breath. You collapse infront of a tree and rest against it. You run your hands through the bark wishing it was the pelt of your horse.")
         print("You sigh and extract the map with your free hand.")
@@ -240,7 +235,7 @@ while act == 1:
         print("Achievement Unlocked:")
         print("\033[38;2;230;190;0mAin't That a Warm Welcome?\033[0m")
         print('')
-        achieve.append("Ain't That a Warm Welcome?(Sacrifice your horse in Act 1)")
+        achieve.append("\033[38;2;230;190;0mAin't That a Warm Welcome?\033[0m(Sacrifice your horse in Act 1)")
     print('')
     print('')
     print("Now that you've made it into Switzerland, you must find the Kingdom ruled by \033[0;31mAldéric Tremblay\033[0m.")
