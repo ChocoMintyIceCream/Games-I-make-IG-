@@ -223,9 +223,9 @@ while act == 1:
         print(allies)
         print('')
         write("Achievement Unlocked:")
-        print("\033[38;2;230;190;0mThe Journey Begins(Again)\033[0m")
+        print("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m")
         print('')
-        achieve.append("\033[38;2;230;190;0mThe Journey Begins(Again)\033[0m(Make it over the border in Act 1)")
+        achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
     elif Q1 == "B" and "Horse" != allies:
         write("You run without looking back and only stop once you are out of breath. You collapse infront of a tree and rest against it. You run your hands through the bark wishing it was the pelt of your horse.")
         write("You sigh and extract the map with your free hand.")
