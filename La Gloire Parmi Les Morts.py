@@ -64,7 +64,7 @@ print( txt.center(100))
 print("")
 while act == 1:
     Q0 = None
-    dd(hp,death)
+    dd(hp,deaths)
     print(space.center(100))
     print(space.center(100))
     print(space.center(100))
@@ -136,7 +136,7 @@ while act == 1:
                 print(space.center(100))
                 write("One of your hands reaches for the top of the border, and with you propell yourself forward.")
                 write("A guard sees you but you manage to grip the back of his cape and pulling towards the edge.")
-                write("You successfully take him out by pulling him off and letting him fall to his death.") 
+                write("You successfully take him out by pulling him off and letting him fall to his deaths.") 
                 write("You finish climbing but are surprised to see more guards than you expected.")
                 write("They don't seem very content with what happened to their fellow guardsman.")
                 print("")
@@ -189,7 +189,7 @@ while act == 1:
                     write("\033[1mENDING 0: Le Destin du fou\033[0m")
                     hp = 0
                     Q1 = None
-                    # death +=1
+                    # deaths +=1
                 elif btwo == "C":
                     print(space.center(100))
                     print(space.center(100))
@@ -207,8 +207,8 @@ while act == 1:
                     break
             elif Q1 == "B" and "Horse" in allies:
                 print("Are you sure?")
-                horsedeath = input(":",).upper()
-                if horsedeath =="YES":
+                horsedeaths = input(":",).upper()
+                if horsedeaths =="YES":
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
@@ -222,7 +222,7 @@ while act == 1:
                     print("Your current ally list is:")
                     print(allies)
                     break
-                elif horsedeath == "NO":
+                elif horsedeaths == "NO":
                     print("action canceled")
                     Q1 = None
             elif Q1 == "C":
