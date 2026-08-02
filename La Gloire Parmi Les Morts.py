@@ -39,7 +39,7 @@ def firpoint(canend):
 notoriety = 0
 hp = 1000
 weap = ["Golden Dagger","Rapier",]
-invent = ["\033[38;5;212mGrappling Hook\033[0m)","\033[38;2;135;62;35mMap of Switzerland\033[0m","\033[38;2;130;0;250mDried up viola flower\033[0m"]
+invent = ["\033[38;5;212mGrappling Hook\033[0m)","\033[38;2;135;62;35mMap of Switzerland\033[0m","\033[38;2;130;0;250mDried up viola flower\033[0m","\033[38;2;130;7;250mList of 14 names\033[0m"]
 allies = ["Horse",]
 outfit = "regular"
 achieve = []
@@ -168,7 +168,7 @@ while act == 1:
                     print("")
                     write('After taking a small break, you resume your descend and successfully make it over the border.')
                     break
-            elif Q1 =="B" and "Horse" in allies:
+            elif Q1 == "B" and "Horse" in allies:
                 print("Are you sure?")
                 horsedeath = input(":",).upper()
                 if horsedeath =="YES":
@@ -195,9 +195,8 @@ while act == 1:
                 print("You now have:",smkbmb,"smoke bomb(s) left.")
                 break
         elif Q0 == "C":
-            write("Your current weapons are:")
             for wep in weap:
-                print(wep)
+                print("Your current weapons are:",wep)
             for items in invent:
                 print("Your inventory has:",items)
             for allies in allies:
@@ -217,7 +216,7 @@ while act == 1:
         print("Your current notoriety is:",notoriety)
         firpoint(canend)
     elif Q0 == "B" and "Horse" in allies:
-        write("As you begin walking, you see that the guards at the entrance are closely observing your horse. Whistling for it is not an option. Hence, you walk away, hoping for the horse's well being...")
+        write("As you begin walking, you see that the guards at the entrance are closely observing your horse. Whistling for it is not an option. Hence, you walk away, hoping for the animals's well being...")
         print('')
         write("You have lost an ally:")
         write("\033[38;2;100;100;100mHorse\033[0m has been removed")
@@ -243,7 +242,9 @@ while act == 1:
         print("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m")
         print('')
         achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
-        
+    print("")
+    print("")
+    
 
 # ending yay and achievements lol!!:
 print("")
