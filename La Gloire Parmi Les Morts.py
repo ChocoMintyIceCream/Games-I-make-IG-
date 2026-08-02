@@ -29,6 +29,7 @@ def dd(hp,deaths):
             print("You have died again")
     return hp,deaths
 
+
 def firpoint(canendpoints):
     if canendpoints == 1:
         print('')
@@ -36,7 +37,7 @@ def firpoint(canendpoints):
         print("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m")
         achieve.append("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m (Earn Your First Canon Ending point)")
     else:
-        print("you've aquired another canon ending point.")
+        print("you've acquired another canon ending point.")
     return canendpoints
 deadach = "off"
 notoriety = 0
@@ -56,7 +57,10 @@ canendpoints = 0
 deaths = 0
 
 
+
+
 #I really hope nobody reads these notes... They're just me lowkey rambling about my OC(cuz he's cool and my son and I just love this universe xp) and randomly dropping lore...
+
 
 txt = "La Gloire Parmi Les Morts"
 space = "."
@@ -134,7 +138,7 @@ while act == 1:
                 print(space.center(100))
                 print(space.center(100))
                 print(space.center(100))
-                write("One of your hands reaches for the top of the border, and with you propell yourself forward.")
+                write("One of your hands reaches for the top of the border, and with you propel yourself forward.")
                 write("A guard sees you but you manage to grip the back of his cape and pulling towards the edge.")
                 write("You successfully take him out by pulling him off and letting him fall to his deaths.") 
                 write("You finish climbing but are surprised to see more guards than you expected.")
@@ -157,7 +161,7 @@ while act == 1:
                     write("")
                     write("")
                     write("")
-                    write("But, just as the guards are only a few inches away from you the smoke bomb finaly goes off.")
+                    write("But, just as the guards are only a few inches away from you the smoke bomb finally goes off.")
                     write("You quickly run away and begin to descend into the country while the guards start coughing.")
                     print('')
                     write('Your notoriety has increased')
@@ -180,9 +184,9 @@ while act == 1:
                     write("")
                     write("")
                     write('You hear the blast of muskets going off')
-                    write("Suddendly, your enture body feels as if it were in flames.")
+                    write("Suddendly, your entire body feels as if it were in flames.")
                     write("You fall to your knees and onto the ground below; coughing up blood.")
-                    write("The world infront of you becomes a blur before being consumed by darkness...")
+                    write("The world in front of you becomes a blur before being consumed by darkness...")
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
@@ -195,7 +199,7 @@ while act == 1:
                     print(space.center(100))
                     print(space.center(100))
                     write("You decide to stab your way out of confrontation.")
-                    write("Some of the guards were easy to take out; others fought back fiercly. Nevertheless, none survived the assault.")
+                    write("Some of the guards were easy to take out; others fought back fiercely. Nevertheless, none survived the assault.")
                     write("The five guards are gone, but you were wounded in the process...")
                     hp-=55
                     print('')
@@ -235,7 +239,7 @@ while act == 1:
                 write("...")
                 write("...")
                 write("...!")
-                write("You finaly manage to extract a smoke bomb,") 
+                write("You finally manage to extract a smoke bomb,") 
                 write("You quickly throw it over the ledge.") 
                 write("The running stops...")
                 write("And a loud \x1B[1;3mhiss\x1B[0m replaces it.")
@@ -256,7 +260,7 @@ while act == 1:
             print("You have:",mon,"francs to your name")
             print('')
             print("A: Kill the guards (requires a weapon)")
-            print("B: Sneek Past (requires:\033[38;5;212mGrappling Hook\033[0m)")
+            print("B: Sneak Past (requires:\033[38;5;212mGrappling Hook\033[0m)")
             print("To check your stats, type 'C'")
             Q0 = input(":",).upper()
     print("")
@@ -298,7 +302,7 @@ while act == 1:
         print('')
         achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
     elif Q1 == "B" and "Horse" != allies:
-        #why would anyone do this to the poor horse! (I made this an option, why am I complaining???)
+        #why would anyone do this to the poor horse! (I made this an option; why am I complaining???)
         write("You run...")
         write("And run...")
         write("And run...")
@@ -322,6 +326,7 @@ while act == 1:
         achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
     print("")
     print("")
+
 
 # ending yay and achievements lol!!:
 print("")
