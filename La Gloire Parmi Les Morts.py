@@ -1,14 +1,17 @@
 from sys import stdout
 import os
 import time 
+def clear_terminal():
+     os.system('cls' if os.name == 'nt' else 'clear')
+
 def write(print):
      for i in print:
         stdout.write(i)
         stdout.flush()
         time.sleep(.045)
      next = input()
+
 def dd(hp,deaths):
-     deaths +=1
      global deadach
      if hp == 0:
           print('')
@@ -56,7 +59,7 @@ canendpoints = 0
 deaths = 0
 
 #I really hope nobody reads these notes... They're just me lowkey rambling about my OC(cuz he's cool and my son and I just love this universe xp) and randomly dropping lore...
-
+clear_terminal()
 txt = "La Gloire Parmi Les Morts"
 space = "."
 print( txt.center(100))
@@ -216,6 +219,7 @@ while act == 1:
                          Q1 = None
                          Q1 = None
                          Q2 = None
+                         deaths+=1
                          break
                     elif Q2 == "C":
                          print(space.center(100))
@@ -368,6 +372,7 @@ while act == 1:
      act == 2
 
 while act == 2:
+     clear_terminal()
      break
 # ending yay and achievements lol!!:
 print("")
