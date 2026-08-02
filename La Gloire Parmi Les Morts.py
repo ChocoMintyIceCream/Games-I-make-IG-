@@ -56,11 +56,7 @@ canon_kills = 0
 canendpoints = 0
 deaths = 0
 
-
-
-
 #I really hope nobody reads these notes... They're just me lowkey rambling about my OC(cuz he's cool and my son and I just love this universe xp) and randomly dropping lore...
-
 
 txt = "La Gloire Parmi Les Morts"
 space = "."
@@ -86,7 +82,8 @@ while act == 1:
     write("The gates of the kingdom welcome your view, standing tall like a mysterious obelisk.")
     print("")
     write("You dismount your horse and slowly make your way towards the gates.") 
-    write("Two guards standing side by side, both of them equipped with sabres.")
+    print("")
+    write("Two guards are standing side by side, both of them equipped with sabres.")
     print("")
     print("")
     #yay first choice... Yuppie!
@@ -103,13 +100,39 @@ while act == 1:
                 print(space.center(100))
                 print(space.center(100))
                 print(space.center(100))
-                write("You manage to kill both guards but were wounded in the process")
-                hp-=25
-                notoriety+=20
-                write("Your current health is:")
-                print(hp)
+                write("You approah the guards slowly...")
                 print("")
-                canendpoints += 1
+                write("And slowly...")
+                print("")
+                write("And slowly...")
+                print("")
+                write("Until you are face-to-face with them.")
+                print("")
+                write("The guards turn to look at each other and back at you.")
+                print("")
+                write("\033[1mGuard\033[0m: Leave now, stranger, this area is off limits!")
+                write("You say nothing in return.")
+                write("\033[1mGuard\033[0m: Didn't you hear me? Back away now or else!")
+                write("Your hand reaches for the dagger at your side, you unsheathe it quickly and slash the guards neck.")
+                write("He grips the wound before falling over onto the ground.")
+                write("You prepare to strike the second guard-")
+                print("")
+                write("But he blocks your attack with his sword.")
+                write("You back away and attempt to lunge at him.")
+                print("")
+                write("Before you are able to stab him, he slashes your arm.")
+                write("You wince, but continue to fight.")
+                write("...")
+                write("...")
+                write("...!")
+                write("You deliver the final blow by stabing him in the chest.")
+                print("")
+                write("You pant heavily and sheathe your dagger once more.")
+                write("Your left arm feels as if it were on fire.")
+                hp-=25
+                print("Your current health is:",hp)
+                print("")
+                canendpoints+=1
                 break
             else:
                 print("A: Kill the guards (requires a weapon)")
@@ -266,15 +289,29 @@ while act == 1:
     print("")
     if Q0 == "A":
         #LOL! Not Lazare aura farming during this moment...
-        write("You return to your horse, mounting it once more and riding to the gates.")
-        write("As pass into the country, you hear shouts coming from up the border.") 
-        write("You turn to look back and see five guards shouting at you, the muskets pointing at you.") 
-        write("You tell your horse \033[1;3m'allez!'\033[0m and it speeds off.")
-        write("The a loud bang echoes through the country, yet none of the shots reach you...")
+        write("You return to your horse, hurring to extract a roll of badages and a small bottle from your saddlebag.")
+        write("The gash on your arm is still bleeding...")
+        write("You pour the remains of the bottle onto the wound, the burning suddendly doubles.")
+        write("You try to igonre the pain as you begin wrapping up the wound...")
+        write("")
+        write("It takes you a few minutes to finish wraping your arm.")
+        write("The bandages and tonic alone are not ideal, but they will have to do, for now...")
+        write("You sigh and mount your horse once more, making your way to the gates once more.")
+        print("")
+        write("As you pass into the country, you hear shouts coming from up the border.") 
+        write("You turn to look and see five guards shouting at you, their muskets aiming directly at you.")
+        print("")
+        write("You sigh and grip the leather reins.")
+        write("You tell your horse \033[1;3m'allez!'\033[0m and it speeds up.")
+        print("")
+        write("A loud \033[1;3mBANG\033[0m echoes through the country") 
+        write("...")
+        write("None of the fired shots reach you.")
         print(space.center(100))
         print(space.center(100))
         print(space.center(100))
         write("Your notoriety has gone up:")
+        notoriety+=25
         print("Your current notoriety is:",notoriety)
         firpoint(canendpoints)
         write("Achievement Unlocked:")
