@@ -372,7 +372,8 @@ while act == 1:
           break
      print("")
      print("")
-     act == 2
+
+act == 2
 
 while act == 2:
      clear_terminal()
