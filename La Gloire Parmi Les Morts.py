@@ -8,7 +8,26 @@ def write(print):
      for i in print:
         stdout.write(i)
         stdout.flush()
+        time.sleep(.050)
+     next = input()
+
+def slow(print):
+     for s in print:
+        stdout.write(p)
+        stdout.flush()
+        time.sleep(.080)
+     next = input()
+def medi(print):
+     for m in print:
+        stdout.write(p)
+        stdout.flush()
         time.sleep(.045)
+     next = input()
+def quick(print):
+     for p in print:
+        stdout.write(p)
+        stdout.flush()
+        time.sleep(.020)
      next = input()
 
 def dd(hp,deaths):
@@ -163,8 +182,10 @@ while act == 1:
                     print(space.center(100))
                     print(space.center(100))
                     write("One of your hands reaches for the top of the border, and with you propel yourself forward.")
-                    write("A guard sees you but you manage to grip the back of his cape and pulling towards the edge.")
+                    write("A guard sees you but you manage to grip the back of his cape and pull him towards the edge.")
                     write("You successfully take him out by pulling him off and letting him fall to his deaths.") 
+                    write("...")
+                    print("")
                     write("You finish climbing but are surprised to see more guards than you expected.")
                     write("They don't seem very content with what happened to their fellow guardsman.")
                     print("")
@@ -226,7 +247,9 @@ while act == 1:
                          print(space.center(100))
                          print(space.center(100))
                          write("You decide to stab your way out of confrontation.")
+                         print("")
                          write("Some of the guards were easy to take out; others fought back fiercely. Nevertheless, none survived the assault.")
+                         print("")
                          write("The five guards are gone, but you were wounded in the process...")
                          hp-=55
                          print("")
@@ -252,11 +275,16 @@ while act == 1:
                     print(allies)
                     break
                elif Q1 == "C":
+                    print(space.center(100))
+                    print(space.center(100))
+                    print(space.center(100))
                     write("You reach for your satchel while keeping yourself steady with one hand.")
                     write("The commotion draws near, and you hear someone yell 'Hey!' before hearing someone running.")
+                    print("")
                     write("You struggle to pull out a smoke bomb from your satchel and cause one of them to fall")
                     smkbmb-=1
                     write("The footsteps draw closer")
+                    print("")
                     write("And closer")
                     write("...")
                     write("...")
