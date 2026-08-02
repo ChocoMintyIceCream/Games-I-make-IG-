@@ -324,6 +324,7 @@ while act == 1:
           print("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m")
           print('')
           achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
+          break
      elif Q0 == "B" and "Horse" in allies:
           write("As you begin walking away, you see that the guards at the entrance are observing your horse.")
           write("The poor thing...")
@@ -344,6 +345,7 @@ while act == 1:
           print("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m")
           print('')
           achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
+          break
      elif Q1 == "B" and "Horse" != allies:
         #why would anyone do this to the poor horse! (I made this an option; why am I complaining???)
           write("You run...")
@@ -367,6 +369,7 @@ while act == 1:
           print("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m")
           print('')
           achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
+          break
      print("")
      print("")
      act == 2
