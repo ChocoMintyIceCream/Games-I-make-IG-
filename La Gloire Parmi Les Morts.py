@@ -71,7 +71,7 @@ while act == 1:
     write("                                         \033[1mDecember 15, 1793\033[0m")
     print("")
     write("The storm is not dying down; it continues to intensify with every gallop of the horse below. The winds, wild and vile, shake the surrounding trees. The snow descending from the sky feels like small daggers piercing through the skin. Yet, none of it will quench the fire of your determination.")
-    write("It’s been months since you left France for this strange country. All of your journey has led you here: a foreign country far away from home, a place where the sun doesn't rise, the land of thieves and mercenaries, the land where those \033[3mcowards\033[0m ran away to.")
+    write(" Its been months since you left France for this strange country. All of your journey has led you here: a foreign country far away from home, a place where the sun doesn't rise, the land of thieves and mercenaries, the land where those \033[3mcowards\033[0m ran away to.")
     write("The loud galloping of the horse below stops as soon as you pull on the reins. It neighs and steps on its hind legs. The gates of the kingdom welcome your view, standing tall like an obelisk.")
     write("You dismount the horse and slowly make your way towards the gates. Two guards standing side by side, both of them equipped with sabres.")
     print('')
@@ -83,6 +83,8 @@ while act == 1:
     Q0 = input(":",).upper()
     while Q0 != "A" or Q0 !="B":
         dd(hp,act,death)
+        Q0 = None
+        Q1 = None
         if Q0 == "A":
             print("Are you sure?")
             qw = input(":",).upper()
@@ -93,7 +95,8 @@ while act == 1:
                 write("You manage to kill both guards but were wounded in the process")
                 hp-=25
                 notoriety+=20
-                write("Your current health is:",hp)
+                write("Your current health is:")
+                print(hp)
                 print("")
                 canend += 1
                 break
@@ -122,7 +125,7 @@ while act == 1:
                 write("What should you do?")
                 print("A: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
                 print("B: Make a run for it")
-                ptinr("C: Fight back (requires a weapon)")
+                print("C: Fight back (requires a weapon)")
                 btwo = input(":",).upper()
                 if btwo == "A":
                     print(space.center(100))
