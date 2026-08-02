@@ -39,13 +39,13 @@ def firpoint(canend):
 notoriety = 0
 hp = 1000
 weap = ["Golden Dagger","Rapier",]
-invent = ["\033[38;2;130;0;250mGrappling Hook\033[0m)","\033[38;2;135;62;35mMap of Switzerland\033[0m","\033[38;2;255;105;180mDried up viola flower\033[0m"]
+invent = ["\033[38;5;212mGrappling Hook\033[0m)","\033[38;2;135;62;35mMap of Switzerland\033[0m","\033[38;2;130;0;250mDried up viola flower\033[0m"]
 allies = ["Horse",]
 outfit = "regular"
 achieve = []
 smkbmb = 5
 mon = 100
-foodrat = 10
+foodrat = []
 act = 1
 kill_count = 0
 canend = 0
@@ -78,7 +78,7 @@ while act == 1:
     write("")
     write("What will you do?")
     write("A: Kill the guards (requires a weapon)")
-    write("B: sneak past (requires:\033[38;2;130;0;250mGrappling Hook\033[0m)")
+    write("B: sneak past (requires:\033[38;5;212mGrappling Hook\033[0m)")
     write("To check your stats, type 'C'")
     Q0 = input(":",).upper()
     while Q0 != "A" or Q0 !="B":
@@ -102,7 +102,7 @@ while act == 1:
                 break
             else:
                 print("A: Kill the guards (requires a weapon)")
-                print("B: sneek past (requires:",invent[0],")")
+                print("B: sneek past (requires:\033[38;5;212mGrappling Hook\033[0m)")
                 print("To check inventory, type 'C'")
                 Q0 = input(":",).upper()
         elif Q0 == "B":
@@ -194,8 +194,9 @@ while act == 1:
                 print("You now have:",smkbmb,"smoke bomb(s) left.")
                 break
         elif Q0 == "C":
+            write("Your current weapons are:")
             for wep in weap:
-                print("Your current weapons are:",wep)
+                print(wep)
             for items in invent:
                 print("Your inventory has:",items)
             for allies in allies:
