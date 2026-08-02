@@ -243,7 +243,7 @@ print("")
 print(space.center(100))
 print(space.center(100))
 print(space.center(100))
-print("Thanks for playing!")
+print("\033[1mThanks for playing!\033[0m")
 print('')
 print("Across your journey, you earned the following achievements:")
 for OH in achieve:
