@@ -240,11 +240,12 @@ while act == 1:
                          print(space.center(100))
                          print(space.center(100))
                          write("\033[1mENDING 0: Le Destin du fou\033[0m")
-                         hp = 0
+                         hp-=1000
                          Q1 = None
                          Q1 = None
                          Q2 = None
                          deaths+=1
+                         dd(hp,deaths)
                          break
                     elif Q2 == "C":
                          print(space.center(100))
