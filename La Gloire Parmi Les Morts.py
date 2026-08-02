@@ -142,7 +142,6 @@ while act == 1:
                 print("To check inventory, type 'C'")
                 Q0 = input(":",).upper()
         elif Q0 == "B":
-            
             print(space.center(100))
             print(space.center(100))
             print(space.center(100))
@@ -236,14 +235,16 @@ while act == 1:
                     print(space.center(100))
                     write('After taking a small break, you resume your descend and successfully make it over the border.')
                     break
-            elif Q1 == "B" and "Horse" in allies:
+          elif Q1 == "B" and "Horse" in allies:
                 print("Are you sure?")
-                horsedeaths = input(":",).upper()
-                if horsedeaths =="YES":
+                horsedea = input(":",).upper()
+                if horsedea == "YES":
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
-                    write('You whistle for your horse, startling the guards above. You see them running past you, and they begin shouting at the animal. While they are distracted, you finally finish climbing up the border and, without a second thought, begin descending into the country. As you finally make it down, you hear multiple muskets going off, followed by a loud neigh.')
+                    write("You whistle for your horse, startling the guards above.")
+                    
+                    write("You see them running past you, and they begin shouting at the animal. While they are distracted, you finally finish climbing up the border and, without a second thought, begin descending into the country. As you finally make it down, you hear multiple muskets going off, followed by a loud neigh.")
                     print('')
                     write("You have lost an ally:")
                     write("\033[38;2;100;100;100mHorse\033[0m has been removed")
@@ -253,7 +254,7 @@ while act == 1:
                     print("Your current ally list is:")
                     print(allies)
                     break
-                elif horsedeaths == "NO":
+                elif horsedea == "NO":
                     print("action canceled")
                     Q1 = None
             elif Q1 == "C":
