@@ -5,7 +5,7 @@ def write(print):
      for i in print:
         stdout.write(i)
         stdout.flush()
-        time.sleep(.055)
+        time.sleep(.045)
      next = input()
 def dd(hp,deaths):
      deaths +=1
