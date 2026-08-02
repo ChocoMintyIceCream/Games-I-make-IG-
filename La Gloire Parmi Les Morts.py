@@ -225,7 +225,7 @@ while act == 1:
                          write("Some of the guards were easy to take out; others fought back fiercely. Nevertheless, none survived the assault.")
                          write("The five guards are gone, but you were wounded in the process...")
                          hp-=55
-                         print('')
+                         print("")
                          print("Your current health is:",hp)
                          print(space.center(100))
                          print(space.center(100))
@@ -268,7 +268,9 @@ while act == 1:
                     break
           elif Q0 == "C":
                print("Your weapons are:",weap)
-               print("Your inventory has:",invent)
+               print("Your inventory has:")
+               for item in invent:
+                    print(item)
                print('Available allies:',allies)
                print("Your health is:",hp)
                print("Smoke Bombs:",smkbmb)
