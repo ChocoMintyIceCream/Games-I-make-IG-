@@ -32,7 +32,7 @@ def firpoint(canend):
         print('')
         print("Achievement Unlocked:")
         print("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m")
-        achieve.append("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m(Earn Your First Canon Ending point)")
+        achieve.append("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m (Earn Your First Canon Ending point)")
     else:
         print("you've aquired another canon ending point.")
     return canend
@@ -73,9 +73,10 @@ while act == 1:
     write("The storm is not dying down; it continues to intensify with every gallop of the horse below. The winds, wild and vile, shake the surrounding trees. The snow descending from the sky feels like small daggers piercing through the skin. Yet, none of it will quench the fire of your determination.")
     write("It's been months since you left France for this strange country. All of your journey has led you here: a foreign country far away from home, a place where the sun doesn't rise, the land of thieves and mercenaries, the land where those \033[3mcowards\033[0m ran away to.")
     write("The loud galloping of the horse below stops as soon as you pull on the reins. It neighs and steps on its hind legs. The gates of the kingdom welcome your view, standing tall like an obelisk.")
+    print("")
     write("You dismount the horse and slowly make your way towards the gates. Two guards standing side by side, both of them equipped with sabres.")
-    print('')
-    write("")
+    print("")
+    print("")
     print("What will you do?")
     write("A: Kill the guards (requires a weapon)")
     write("B: sneak past (requires:\033[38;5;212mGrappling Hook\033[0m)")
@@ -206,7 +207,7 @@ while act == 1:
             print("You have:",mon,"francs to your name")
             print('')
             print("A: Kill the guards (requires a weapon)")
-            print("B: Sneek In (requires:\033[38;2;130;0;250mGrappling Hook\033[0m)")
+            print("B: Sneek In (requires:\033[38;5;212mGrappling Hook\033[0m)")
             print("To check your stats, type 'C'")
             Q0 = input(":",).upper()
     print("")
@@ -238,6 +239,11 @@ while act == 1:
         print("\033[38;2;230;190;0mAin't That a Warm Welcome?\033[0m")
         print('')
         achieve.append("\033[38;2;230;190;0mAin't That a Warm Welcome?\033[0m(Sacrifice your horse in Act 1)")
+        write("Achievement Unlocked:")
+        print("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m")
+        print('')
+        achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
+        
 
 # ending yay and achievements lol!!:
 print("")
