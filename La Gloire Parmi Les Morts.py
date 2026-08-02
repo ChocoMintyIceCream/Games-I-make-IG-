@@ -8,36 +8,36 @@ def write(print):
         time.sleep(.055)
      next = input()
 def dd(hp,deaths):
-    deaths +=1
-    if hp == 0:
-        global deadach
-        print('')
-        print("You have died...")
-        print("Would you like to try again?")
-        res = input(":",).upper()
-        if res == "NO":
-            print("\033[1m GAME OVER \033[0m")
-            quit()
-        elif res == "YES":
-            hp += 1000
-        if deaths == 1 and deadach == "off":
-            print("Achievement Unlocked:")
-            print("\033[38;2;230;190;0mLazarus, come out!(John 11:43-44)\033[0m")
-            achieve.append("Lazarus, come out!(John 11:43-44)(Revive for the first time)")
-            deadach == "on"
-        elif deadach == "on" and deaths != 1:
-            print("You have died again")
-    return hp,deaths
+     deaths +=1
+     global deadach
+     if hp == 0:
+          print('')
+          print("You have died...")
+          print("Would you like to try again?")
+          res = input(":",).upper()
+          if res == "NO":
+               print("\033[1m GAME OVER \033[0m")
+               quit()
+          elif res == "YES":
+               hp = 1000
+     if deaths == 1 and deadach == "off":
+          print("Achievement Unlocked:")
+          print("\033[38;2;230;190;0mLazarus, come out!(John 11:43-44)\033[0m")
+          achieve.append("Lazarus, come out!(John 11:43-44)(Revive for the first time)")
+          deadach == "on"
+     elif deadach == "on" and deaths != 1:
+          print("You have died again")
+     return hp,deaths
 
 def firpoint(canendpoints):
-    if canendpoints == 1:
-        print('')
-        print("Achievement Unlocked:")
-        print("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m")
-        achieve.append("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m (Earn Your First Canon Ending point)")
-    else:
-        print("you've acquired another canon ending point.")
-    return canendpoints
+     if canendpoints == 1:
+          print('')
+          print("Achievement Unlocked:")
+          print("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m")
+          achieve.append("\033[38;2;230;190;0mOne Step Closer To The Truth\033[0m (Earn Your First Canon Ending point)")
+     else:
+          print("you've acquired another canon ending point.")
+     return canendpoints
 deadach = "off"
 notoriety = 0
 hp = 1000
@@ -62,9 +62,6 @@ space = "."
 print( txt.center(100))
 print("")
 while act == 1:
-     Q0 = None
-     Q1 = None
-     Q2 = None
      dd(hp,deaths)
      print(space.center(100))
      print(space.center(100))
@@ -98,43 +95,43 @@ while act == 1:
                print("Are you sure?")
                con = input(":",).upper()
                if con == "YES":
-               print(space.center(100))
-               print(space.center(100))
-               print(space.center(100))
-               write("You approah the guards slowly...")
-               print("")
-               write("And slowly...")
-               print("")
-               write("And slowly...")
-               print("")
-               write("Until you are face-to-face with them.")
-               print("")
-               write("The guards turn to look at each other and back at you.")
-               print("")
-               write("\033[1mGuard\033[0m: Leave now, stranger, this area is off limits!")
-               write("You say nothing in return.")
-               write("\033[1mGuard\033[0m: Didn't you hear me? Back away now or else!")
-               write("Your hand reaches for the dagger at your side, you unsheathe it quickly and slash the guards neck.")
-               write("He grips the wound before falling over onto the ground.")
-               write("You prepare to strike the second guard-")
-               print("")
-               write("But he blocks your attack with his sword.")
-               write("You back away and attempt to lunge at him.")
-               print("")
-               write("Before you are able to stab him, he slashes your arm.")
-               write("You wince, but continue to fight.")
-               write("...")
-               write("...")
-               write("...!")
-               write("You deliver the final blow by stabing him in the chest.")
-               print("")
-               write("You pant heavily and sheathe your dagger once more.")
-               write("Your left arm feels as if it were on fire.")
-               hp-=25
-               print("Your current health is:",hp)
-               print("")
-               canendpoints+=1
-               break
+                    print(space.center(100))
+                    print(space.center(100))
+                    print(space.center(100))
+                    write("You approah the guards slowly...")
+                    print("")
+                    write("And slowly...")
+                    print("")
+                    write("And slowly...")
+                    print("")
+                    write("Until you are face-to-face with them.")
+                    print("")
+                    write("The guards turn to look at each other and back at you.")
+                    print("")
+                    write("\033[1mGuard\033[0m: Leave now, stranger, this area is off limits!")
+                    write("You say nothing in return.")
+                    write("\033[1mGuard\033[0m: Didn't you hear me? Back away now or else!")
+                    write("Your hand reaches for the dagger at your side, you unsheathe it quickly and slash the guards neck.")
+                    write("He grips the wound before falling over onto the ground.")
+                    write("You prepare to strike the second guard-")
+                    print("")
+                    write("But he blocks your attack with his sword.")
+                    write("You back away and attempt to lunge at him.")
+                    print("")
+                    write("Before you are able to stab him, he slashes your arm.")
+                    write("You wince, but continue to fight.")
+                    write("...")
+                    write("...")
+                    write("...!")
+                    write("You deliver the final blow by stabing him in the chest.")
+                    print("")
+                    write("You pant heavily and sheathe your dagger once more.")
+                    write("Your left arm feels as if it were on fire.")
+                    hp-=25
+                    print("Your current health is:",hp)
+                    print("")
+                    canendpoints+=1
+                    break
                else:
                     Q0 = None
                     print("A: Kill the guards (requires a weapon)")
@@ -217,6 +214,7 @@ while act == 1:
                          write("\033[1mENDING 0: Le Destin du fou\033[0m")
                          hp = 0
                          Q1 = None
+                         Q1 = None
                          Q2 = None
                          break
                     elif Q2 == "C":
@@ -234,58 +232,48 @@ while act == 1:
                          print(space.center(100))
                          write('After taking a small break, you resume your descend and successfully make it over the border.')
                          break
-#           elif Q1 == "B" and "Horse" in allies:
-#                 print("Are you sure?")
-#                 horsedea = input(":",).upper()
-#                 if horsedea == "YES":
-#                     print(space.center(100))
-#                     print(space.center(100))
-#                     print(space.center(100))
-#                     write("You whistle for your horse, startling the guards above.")
-                    
-#                     write("You see them running past you, and they begin shouting at the animal. While they are distracted, you finally finish climbing up the border and, without a second thought, begin descending into the country. As you finally make it down, you hear multiple muskets going off, followed by a loud neigh.")
-#                     print('')
-#                     write("You have lost an ally:")
-#                     write("\033[38;2;100;100;100mHorse\033[0m has been removed")
-#                     print('')
-#                     allies.remove("Horse")
-#                     allies.append("None")
-#                     print("Your current ally list is:")
-#                     print(allies)
-#                     break
-#                 elif horsedea == "NO":
-#                     print("action canceled")
-#                     Q1 = None
-#             elif Q1 == "C":
-#                 write("You reach for your satchel while keeping yourself steady with one hand.")
-#                 write("The commotion draws near, and you hear someone yell 'Hey!' before hearing someone running.")
-#                 write("You struggle to pull out a smoke bomb from your satchel and cause one of them to fall")
-#                 smkbmb-=1
-#                 write("The footsteps draw closer")
-#                 write("And closer")
-#                 write("...")
-#                 write("...")
-#                 write("...!")
-#                 write("You finally manage to extract a smoke bomb,") 
-#                 write("You quickly throw it over the ledge.") 
-#                 write("The running stops...")
-#                 write("And a loud \x1B[1;3mhiss\x1B[0m replaces it.")
-#                 write("You finish climbing the ledge and quickly begin to descend on the country. You make it there once the smoke has disappeared.")
-#                 smkbmb-=1
-#                 print('')
-#                 print("You now have:",smkbmb,"smoke bomb(s) left.")
-#                 break
+               elif Q1 == "B" and "Horse" in allies:
+                    print(space.center(100))
+                    print(space.center(100))
+                    print(space.center(100))
+                    write("You whistle for your horse, startling the guards above.")
+                    write("You see them running past you, and they begin shouting at the animal. While they are distracted, you finally finish climbing up the border and, without a second thought, begin descending into the country. As you finally make it down, you hear multiple muskets going off, followed by a loud neigh.")
+                    print('')
+                    write("You have lost an ally:")
+                    write("\033[38;2;100;100;100mHorse\033[0m has been removed")
+                    print('')
+                    allies.remove("Horse")
+                    allies.append("None")
+                    print("Your current ally list is:")
+                    print(allies)
+                    break
+               elif Q1 == "C":
+                    write("You reach for your satchel while keeping yourself steady with one hand.")
+                    write("The commotion draws near, and you hear someone yell 'Hey!' before hearing someone running.")
+                    write("You struggle to pull out a smoke bomb from your satchel and cause one of them to fall")
+                    smkbmb-=1
+                    write("The footsteps draw closer")
+                    write("And closer")
+                    write("...")
+                    write("...")
+                    write("...!")
+                    write("You finally manage to extract a smoke bomb,") 
+                    write("You quickly throw it over the ledge.") 
+                    write("The running stops...")
+                    write("And a loud \x1B[1;3mhiss\x1B[0m replaces it.")
+                    write("You finish climbing the ledge and quickly begin to descend on the country. You make it there once the smoke has disappeared.")
+                    smkbmb-=1
+                    print('')
+                    print("You now have:",smkbmb,"smoke bomb(s) left.")
+                    break
           elif Q0 == "C":
-               for wep in weap:
-                    print("Your weapons are:",wep)
-               for items in invent:
-                    print("Your inventory has:",items)
-               for all in allies:
-                    print('Available allies:',all)
-               print("Your health is:",hp, "hp")
+               print("Your weapons are:",weap)
+               print("Your inventory has:",invent)
+               print('Available allies:',allies)
+               print("Your health is:",hp)
                print("Smoke Bombs:",smkbmb)
                print("You have:",mon,"francs to your name")
-               print('')
+               print("")
                print("A: Kill the guards (requires a weapon)")
                print("B: Sneak Past (requires:\033[38;5;212mGrappling Hook\033[0m)")
                print("To check your stats, type 'C'")
@@ -375,10 +363,10 @@ while act == 1:
           achieve.append("\033[38;2;230;190;0mThe Crusade Begins(Again)\033[0m(Make it over the border in Act 1)")
      print("")
      print("")
-act == 2
+     act == 2
+
 while act == 2:
      break
-
 # ending yay and achievements lol!!:
 print("")
 print(space.center(100))
