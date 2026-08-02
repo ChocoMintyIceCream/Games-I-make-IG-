@@ -64,6 +64,8 @@ print( txt.center(100))
 print("")
 while act == 1:
     Q0 = None
+    Q1 = None
+    Q2 = None
     dd(hp,deaths)
     print(space.center(100))
     print(space.center(100))
@@ -140,7 +142,7 @@ while act == 1:
                 print("To check inventory, type 'C'")
                 Q0 = input(":",).upper()
         elif Q0 == "B":
-            Q1 = None
+            
             print(space.center(100))
             print(space.center(100))
             print(space.center(100))
@@ -171,8 +173,8 @@ while act == 1:
                 print("A: Throw smoke bomb (requires: \033[38;2;0;40;255msmoke bomb\033[0m)")
                 print("B: Make a run for it")
                 print("C: Fight back (requires a weapon)")
-                btwo = input(":",).upper()
-                if btwo == "A":
+                Q2 = input(":",).upper()
+                if Q2 == "A":
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
@@ -194,7 +196,7 @@ while act == 1:
                     print('')
                     print("You now have:",smkbmb,"smoke bombs left")
                     break
-                elif btwo == "B":
+                elif Q2 == "B":
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
@@ -216,8 +218,10 @@ while act == 1:
                     write("\033[1mENDING 0: Le Destin du fou\033[0m")
                     hp = 0
                     Q1 = None
+                    Q2 = None
+                    break
                     # deaths +=1
-                elif btwo == "C":
+                elif Q2 == "C":
                     print(space.center(100))
                     print(space.center(100))
                     print(space.center(100))
